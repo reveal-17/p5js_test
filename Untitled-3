@@ -1,0 +1,22 @@
+let sound;
+let analyzer;
+
+function preload() {
+    sound = loadSound("assets/materials/Drum_Loops/Drum_Loop1/Full_Loop.wav");
+    // sound = loadSound("hassei.wav");
+}
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    sound.loop();
+    analyzer = new p5.Amplitude();
+    analyzer.setInput(sound);
+}
+
+function draw() {
+    background(0);
+    let rms = analyzer.getLevel();
+    fill(31, 127, 225, 50);
+    noStroke();
+    ellipse(width / 2, height / 2, 10 + rms * width / 2);
+}

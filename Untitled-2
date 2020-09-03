@@ -1,0 +1,21 @@
+let img;
+
+function preload() {
+    img = loadImage("img.png");
+}
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    img.resize(width, height);
+    background(0);
+}
+
+function draw() {
+    background(0);
+    noStroke();
+    for (let i = 0; i < width; i++) {
+        let c = img.get(i, mouseY);
+        fill(c);
+        rect(i, 0, 1, height);
+    }
+}

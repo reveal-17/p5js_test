@@ -1,0 +1,27 @@
+let sound;
+let fft;
+
+function preload() {
+    sound = loadSound("assets/materials/Drum_Loops/Drum_Loop1/Full_Loop.wav");
+}
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    sound.loop();
+    fft = new p5.FFT();
+    fft.setInput(sound);
+}
+
+function draw() {
+    background(0);
+    stroke(255);
+    noFill();
+    let spectrum = fft.analyze();
+    beginShape();
+    for (i = 0; i < spectrum.length; i++) {
+        let x = map(i, 0, spectrum.length - 1, 0, width);
+        let y = map(spectrum[i], 0, 255, height, 0);
+        vertex(x, y);
+    }
+    endShape();
+}

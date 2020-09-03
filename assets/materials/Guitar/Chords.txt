@@ -1,0 +1,11 @@
+Guitar 1: F#m, A Maj, C#m, E Maj (All triads played with root on low E)
+
+Guitar 2: C#Maj 7 / Eb7Sus2 / F#Maj7
+
+Guitar 3: Dm7, Am7, Gm7
+
+Guitar 5: Emaj7, F#7sus2
+
+Guitar 6: A#Maj, Cminor, Gminor, F Maj
+
+Guitar 7: Emin7(b5),  A7(b13), Dm7
